@@ -1,9 +1,9 @@
-import React from "react";
-import { Editor } from "../editor";
-import { useNote } from "./hooks";
-import { ReadyState } from "react-use-websocket";
+import { Badge, BadgeTypeMap, Paper, TextField } from '@mui/material';
+import React from 'react';
+import { ReadyState } from 'react-use-websocket';
 
-import { Paper, TextField, Badge, BadgeTypeMap } from "@mui/material";
+import { Editor } from '../editor';
+import { useNote } from './hooks';
 
 interface SingleNoteProps {
   id: string;
@@ -36,9 +36,8 @@ const Home: React.FC<SingleNoteProps> = ({ id }) => {
           p: 2,
           display: "flex",
           flexDirection: "column",
-        }}
-      >
-        <Editor initialValue={note.content} />
+        }}>
+        <Editor initialValue={note.content} noteId={id} />
       </Paper>
     </>
   ) : null;

@@ -1,4 +1,10 @@
-import { Descendant } from "slate";
+import { Descendant } from 'slate';
+
+export type Note = {
+  id: string;
+  title: string;
+  content: Array<Descendant>;
+};
 
 export const NOTE_1 = {
   id: "n1",

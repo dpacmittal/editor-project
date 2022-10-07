@@ -1,7 +1,8 @@
-import express, { RequestHandler, Response } from "express";
-import { WebsocketRequestHandler } from "express-ws";
-import { Descendant } from "slate";
-import { NOTE_1, NOTE_2 } from "../fixtures/notes";
+import express, { RequestHandler, Response } from 'express';
+import { WebsocketRequestHandler } from 'express-ws';
+import { Descendant } from 'slate';
+
+import { NOTE_1, NOTE_2 } from '../fixtures/notes';
 
 // Patch `express.Router` to support `.ws()` without needing to pass around a `ws`-ified app.
 // https://github.com/HenningM/express-ws/issues/86
